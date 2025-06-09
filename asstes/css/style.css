@@ -215,7 +215,8 @@
 
     .home-description{
         font-size: var(--larger-font-size);
-        margin-block: 1.5rem 2rem;
+        margin-block: .5rem .3rem;
+        
     }
 
     .home-img-wrapper{
