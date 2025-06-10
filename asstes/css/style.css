@@ -209,13 +209,13 @@
     }
 
     .home-job{
-        font-size: var(--h2-font-size);
+        font-size: var(--h2-fot-size);
         font-weight: var(--font-semi-bold);
     }
 
     .home-description{
         font-size: var(--larger-font-size);
-        margin-block: .5rem .3rem;
+        margin-block: 1.5rem 2rem;
         
     }
 
@@ -238,5 +238,27 @@
 
     .home-social-link:hover {
         color: var(--first-color);
+    }
+
+    /* about section */
+
+    .about-container {
+        grid-template-columns: 3fr 6fr 2fr; 
+        align-items: center;
+        column-gap: 4rem;
+    }
+
+    .about-experiance {
+       width: 280px;
+       height: 420px;
+       background: var(--second-gradient);
+       border-radius: 1rem;
+       display: grid;
+       place-content: center;
+    }
+
+    .about-no,
+    .about-title {
+        color: var(--white-color);
     }
 }
