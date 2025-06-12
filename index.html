@@ -11,36 +11,36 @@
     <link rel="stylesheet" href="./asstes/css/style.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <nav class="nav container">
             <a href="#" class="nav-logo">
                 VIMAL
             </a>
-            <div class="nav-menu">
+            <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Home</a>
+                        <a href="#home" class="nav-link active-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">About</a>
+                        <a href="#about" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Skills</a>
+                        <a href="#skills" class="nav-link">Skills</a>
                     </li>
                      <li class="nav-item">
-                        <a href="#" class="nav-link">Portfolio</a>
+                        <a href="#works" class="nav-link">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Contact</a>
+                        <a href="#contact" class="nav-link">Contact</a>
                     </li>
                 </ul>
-                <i class="ri-close-line nav-close" ></i>
+                <i class="ri-close-line nav-close" id="nav-close" ></i>
 
             </div>
             <div class="nav-btns">
-                <i class="ri-sun-line change-theme"></i>
+                <i class="ri-sun-line change-theme" id="theme-toggle"></i>
 
-                <div class="nav-toggle">
+                <div class="nav-toggle" id="nav-toggle">
                     <i class="ri-menu-line "></i>
                 </div>
             </div>
@@ -53,7 +53,7 @@
 <main class="main">
 
     <!-- home section -->
-    <section class="home section">
+    <section class="home section" id="home">
         <div class="home-container container grid">
             <div class="home-data">
                 <h1 class="home-title">
@@ -91,7 +91,7 @@
     </section>
 
     <!-- about section -->
-     <section class="about section">
+     <section class="about section" id="about">
         <div class="about-container container grid">
             <div class="about-experiance">
                 <span class="about-no"><count-up>6</count-up></span>
@@ -126,12 +126,12 @@
 
      <!-- skills sections -->
 
-     <section class="skills section">
+     <section class="skills section" id="skills">
 
         <h2 class="section-title">My Skills</h2>
 
         <div class="skills-container container grid">
-            <div class="skills-group">
+            <div class="skills-group Frontend">
 
                 <h3 class="skills-title">Frontend</h3>
 
@@ -183,7 +183,7 @@
                 </div>
             </div>
 
-             <div class="skills-group">
+             <div class="skills-group Backend">
 
                 <h3 class="skills-title">Backend</h3>
 
@@ -238,9 +238,9 @@
      </section>
 
 
-     <!-- resume section -->
+     <!-- portfolio section -->
 
-     <section class="work section">
+     <section class="work section" id="works">
         <h2 class="section-title">My Portfolio</h2>
 
         <div class="container">
@@ -332,8 +332,112 @@
         
 
      </section>
+
+
+     <!--   contact section -->
+
+     <section class="contact section" id="contact">
+        <div class="contact-container container grid">
+            <div class="contact-group">
+                    <h2 class="section-title contact-section-title">
+                            Let's Talk About
+                            <br> Your Project
+                        </h2>
+
+                        <div class="contact-data grid">
+                                <div class="contact-item">
+                                    <span class="contact-icon">
+                                        <i class="ri-mail-open-fill"></i>
+                                    </span>
+
+                                    <div>
+                                        <h3 class="contact-title">Email</h3>
+                                        <p class="contact-description">example@mail.com</p>
+
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <span class="contact-icon">
+                                        <i class="ri-phone-fill"></i>
+                                    </span>
+
+                                    <div>
+                                        <h3 class="contact-title">Phone</h3>
+                                        <p class="contact-description">9999999999</p>
+                                        
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <span class="contact-icon">
+                                        <i class="ri-map-pin-2-fill"></i>
+                                    </span>
+
+                                    <div>
+                                        <h3 class="contact-title">Location</h3>
+                                        <p class="contact-description">Your City, Your Country</p>
+
+                                    </div>
+                                </div>
+                        </div>
+            </div>
+
+            <form action="" class="contact-form grid" id="contact-form">
+                <div class="contact-form-div">
+                    <label for="" class="contact-label">Name</label>
+                    <input type="text" name="name" class="contact-input" id="contact-name">
+                </div>
+
+                <div class="contact-form-div">
+                    <label for="" class="contact-label">Email</label>
+                    <input type="email" name="email" class="contact-input" id="contact-email">
+                </div>
+
+                <div class="contact-form-div">
+                    <label for="" class="contact-label">Message</label>
+                    <textarea name="message" class="contact-input contact-area" id="contact-message"></textarea>
+                </div>
+
+                <button type="button" class="button contact-button">
+                    Send Message
+                </button>
+
+                <p class="contact-message" id="message">Write all the input fields</p>
+            </form>
+        </div>
+            
+     </section>
+
+
+   
+
 </main>
 
+  <!-- footer section -->
+
+  <footer class="footer">
+
+    <div class="footer-container container grid">
+
+            <div class="footer-social">
+                <a href="www.github.com/Vpal-98" target="_blank" class="footer-link">
+                    <i class="ri-github-fill"></i>
+                </a>
+
+                <a href="www.linkedin.com" target="_blank" class="footer-link">
+                    <i class="ri-linkedin-fill"></i>
+                </a>
+
+                <a href="https://www.instagram.com/vimal.pal05?igsh=Y2d5Z3hwZjFlMWg0" target="_blank" class="footer-link">
+                    <i class="ri-instagram-line"></i>
+                </a>
+                
+               
+        </div>
+
+        <p class="footer-copyright">© 2025 <span>Vimal Pal</span>. All rights reserved.</p>
+
+    </div>
+  </footer>
 
 <!-- gsap trigger for scrolling -->
 
@@ -346,6 +450,13 @@
 
 <!-- mixitup -->
  <script src="./asstes/js/mixitup.min.js"></script>
+
+ <!-- email -->
+
+ <!-- scroll behaviour -->
+
+ <script src="https://unpkg.com/scrollreveal"></script>
+
 
     <script src="./asstes/js/main.js"></script>
 </body>
