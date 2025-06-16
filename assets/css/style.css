@@ -160,10 +160,11 @@
         .nav-list,
         .nav-btns{
             display: flex;
+            align-items: center;
+            column-gap: 1rem;
         }
 
         .nav{
-        
             align-items: center;
             justify-content: space-between;
             column-gap: 3rem;
@@ -203,17 +204,15 @@
             cursor: pointer;
         }
 
-        .nav-btns {
-            align-items: center;
-            column-gap: 1rem;
+     
+        .nav-toggle i,
+        .nav-close {
+        color: var(--title-color); /* Ensures contrast in dark/light themes */
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: inline-flex;   
         }
 
-        .nav-close,
-        .nav-toggle {
-            display: none;
-            cursor: pointer;
-            
-        }
 
         /* home section */
 
@@ -695,7 +694,7 @@
     .nav-menu{
         position: fixed;
         top: 0;
-        right: -100;
+        right: -100%;
         background-color: hsla(var(--first-hue), 0%, 4%, 0.1);
         width: 55%;
         height: 100%;
@@ -715,12 +714,7 @@
             row-gap: 3rem;
     }
 
-    .nav-close{
-        position: absolute;
-        top: 1rem;
-        right: 1.5rem;
-    }
-
+ 
     .section{
         padding-block: 5rem 2rem;
     }
@@ -825,8 +819,6 @@
             grid-template-columns: 1fr;
         }
 
-
-
     }
 
     @media screen and (max-width: 576px) {
@@ -859,4 +851,82 @@
             grid-template-columns: repeat(2, 1fr);
 
         }
+        .nav-toggle,
+  .nav-close {
+    display: inline-flex;
+    color: var(--title-color);
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
     } 
+
+    @media screen and (max-width: 576px) {
+
+    .nav-toggle,
+  .nav-close {
+    display: inline-flex;
+    color: var(--title-color);
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+  .nav-menu {
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-top: 4rem;
+  }
+
+  .home-title {
+    font-size: 2.5rem;
+  }
+
+  .home-job {
+    font-size: 1.5rem;
+  }
+
+  .home-description {
+    font-size: var(--normal-font-size);
+  }
+
+  .home-container {
+    grid-template-columns: 1fr;
+    padding-top: 1rem;
+    gap: 1.5rem;
+  }
+
+  .home-img-wrapper {
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+
+  .about-container,
+  .skills-container,
+  .contact-container {
+    grid-template-columns: 1fr !important;
+    row-gap: 2rem;
+  }
+
+  .skills-items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .work-container {
+    grid-template-columns: 1fr;
+  }
+
+  .work-card {
+    padding: 1.5rem;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+  }
+}

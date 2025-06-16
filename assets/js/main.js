@@ -53,7 +53,7 @@ const scrollActive = () => {
         const sectionHeight = current.offsetHeight;
         const sectionTop = current.offsetTop - 58;
         const sectionId = current.getAttribute('id');
-        const sectionClass = document.querySelector('.nav-menu a[href*=' + sectionId + ']');
+        const sectionClass = document.querySelector('.nav-menu a [href*=' + sectionId + ']');
         if (sectionClass) {
             if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
                 sectionClass.classList.add('active-link');
@@ -109,10 +109,6 @@ if (typeof ScrollReveal !== "undefined") {
     sr.reveal(`.work-card`, { interval: 100 });
 }
 
-// Menu show and hide
-const navMenu = document.getElementById('nav-menu'),
-    navToggle = document.getElementById('nav-toggle'),
-    navClose = document.getElementById('nav-close');
 
 // Show menu
 if (navToggle && navMenu) {
@@ -122,22 +118,33 @@ if (navToggle && navMenu) {
 }
 
 // Hide menu
-if (navClose && navMenu) {
-    navClose.addEventListener('click', () => {
-        navMenu.classList.remove('show-menu');
-    });
+if (navToggle && navMenu) {
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.add('show-menu');
+  });
 }
 
+// Menu show and hide
+const navMenu = document.getElementById('nav-menu'),
+    navToggle = document.getElementById('nav-toggle'),
+    navClose = document.getElementById('nav-close');
+
+if (navToggle && navMenu) {
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.add('show-menu');
+  });
+}
+
+
+    
+
+
 // Optional: Hide menu when a nav link is clicked (for mobile UX)
-document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        if (navMenu.classList.contains('show-menu')) {
-            navMenu.classList.remove('show-menu');
-        }
-    });
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('show-menu');
+  });
 });
-
-
 
 
 
